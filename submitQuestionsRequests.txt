@@ -1,0 +1,136 @@
+POST /quizquestionattempts/save-user-quiz-answer HTTP/1.1
+Host: api.tesseractonline.com
+Content-Length: 53
+Sec-Ch-Ua: "Chromium";v="125", "Not.A/Brand";v="24"
+Accept: application/json, text/plain, */*
+Content-Type: application/json
+Sec-Ch-Ua-Mobile: ?0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlcnJvciI6ZmFsc2UsInVzZXJuYW1lIjoiMjQ1MzIxNzQ4MDI0Iiwic3ViIjo5NTQsInJvbGUiOiJTVFVERU5UIiwiY29sbGVnZUlkIjoyLCJjb2xsZWdlTmFtZSI6Ik5HSVQiLCJuYW1lIjoiRyBTUklOSVZBU0EgTkFHRU5EUkEgTUlUSFJBIiwiaWF0IjoxNzE4MzcxNzQ2LCJleHAiOjE3MTgzOTMzNDZ9.Hqj56TyRrpIpTZ-I9bFEGrZ3abOs7IOn18ndm-Ge7Dg
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.112 Safari/537.36
+Sec-Ch-Ua-Platform: "macOS"
+Origin: https://tesseractonline.com
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://tesseractonline.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=1, i
+Connection: keep-alive
+
+{"quizId":406146,"questionId":19618,"userAnswer":"a"}
+
+
+POST /quizquestionattempts/save-user-quiz-answer HTTP/1.1
+Host: api.tesseractonline.com
+Content-Length: 53
+Sec-Ch-Ua: "Chromium";v="125", "Not.A/Brand";v="24"
+Accept: application/json, text/plain, */*
+Content-Type: application/json
+Sec-Ch-Ua-Mobile: ?0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlcnJvciI6ZmFsc2UsInVzZXJuYW1lIjoiMjQ1MzIxNzQ4MDI0Iiwic3ViIjo5NTQsInJvbGUiOiJTVFVERU5UIiwiY29sbGVnZUlkIjoyLCJjb2xsZWdlTmFtZSI6Ik5HSVQiLCJuYW1lIjoiRyBTUklOSVZBU0EgTkFHRU5EUkEgTUlUSFJBIiwiaWF0IjoxNzE4MzcxNzQ2LCJleHAiOjE3MTgzOTMzNDZ9.Hqj56TyRrpIpTZ-I9bFEGrZ3abOs7IOn18ndm-Ge7Dg
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.112 Safari/537.36
+Sec-Ch-Ua-Platform: "macOS"
+Origin: https://tesseractonline.com
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://tesseractonline.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=1, i
+Connection: keep-alive
+
+{"quizId":406146,"questionId":19611,"userAnswer":"a"}
+
+
+POST /quizquestionattempts/save-user-quiz-answer HTTP/1.1
+Host: api.tesseractonline.com
+Content-Length: 53
+Sec-Ch-Ua: "Chromium";v="125", "Not.A/Brand";v="24"
+Accept: application/json, text/plain, */*
+Content-Type: application/json
+Sec-Ch-Ua-Mobile: ?0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlcnJvciI6ZmFsc2UsInVzZXJuYW1lIjoiMjQ1MzIxNzQ4MDI0Iiwic3ViIjo5NTQsInJvbGUiOiJTVFVERU5UIiwiY29sbGVnZUlkIjoyLCJjb2xsZWdlTmFtZSI6Ik5HSVQiLCJuYW1lIjoiRyBTUklOSVZBU0EgTkFHRU5EUkEgTUlUSFJBIiwiaWF0IjoxNzE4MzcxNzQ2LCJleHAiOjE3MTgzOTMzNDZ9.Hqj56TyRrpIpTZ-I9bFEGrZ3abOs7IOn18ndm-Ge7Dg
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.112 Safari/537.36
+Sec-Ch-Ua-Platform: "macOS"
+Origin: https://tesseractonline.com
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://tesseractonline.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=1, i
+Connection: keep-alive
+
+{"quizId":406146,"questionId":19617,"userAnswer":"a"}
+
+
+POST /quizquestionattempts/save-user-quiz-answer HTTP/1.1
+Host: api.tesseractonline.com
+Content-Length: 53
+Sec-Ch-Ua: "Chromium";v="125", "Not.A/Brand";v="24"
+Accept: application/json, text/plain, */*
+Content-Type: application/json
+Sec-Ch-Ua-Mobile: ?0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlcnJvciI6ZmFsc2UsInVzZXJuYW1lIjoiMjQ1MzIxNzQ4MDI0Iiwic3ViIjo5NTQsInJvbGUiOiJTVFVERU5UIiwiY29sbGVnZUlkIjoyLCJjb2xsZWdlTmFtZSI6Ik5HSVQiLCJuYW1lIjoiRyBTUklOSVZBU0EgTkFHRU5EUkEgTUlUSFJBIiwiaWF0IjoxNzE4MzcxNzQ2LCJleHAiOjE3MTgzOTMzNDZ9.Hqj56TyRrpIpTZ-I9bFEGrZ3abOs7IOn18ndm-Ge7Dg
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.112 Safari/537.36
+Sec-Ch-Ua-Platform: "macOS"
+Origin: https://tesseractonline.com
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://tesseractonline.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=1, i
+Connection: keep-alive
+
+{"quizId":406146,"questionId":19615,"userAnswer":"a"}
+
+
+POST /quizquestionattempts/save-user-quiz-answer HTTP/1.1
+Host: api.tesseractonline.com
+Content-Length: 53
+Sec-Ch-Ua: "Chromium";v="125", "Not.A/Brand";v="24"
+Accept: application/json, text/plain, */*
+Content-Type: application/json
+Sec-Ch-Ua-Mobile: ?0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlcnJvciI6ZmFsc2UsInVzZXJuYW1lIjoiMjQ1MzIxNzQ4MDI0Iiwic3ViIjo5NTQsInJvbGUiOiJTVFVERU5UIiwiY29sbGVnZUlkIjoyLCJjb2xsZWdlTmFtZSI6Ik5HSVQiLCJuYW1lIjoiRyBTUklOSVZBU0EgTkFHRU5EUkEgTUlUSFJBIiwiaWF0IjoxNzE4MzcxNzQ2LCJleHAiOjE3MTgzOTMzNDZ9.Hqj56TyRrpIpTZ-I9bFEGrZ3abOs7IOn18ndm-Ge7Dg
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.112 Safari/537.36
+Sec-Ch-Ua-Platform: "macOS"
+Origin: https://tesseractonline.com
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://tesseractonline.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=1, i
+Connection: keep-alive
+
+{"quizId":406146,"questionId":19614,"userAnswer":"a"}
+
+
+POST /quizattempts/submit-quiz HTTP/1.1
+Host: api.tesseractonline.com
+Content-Length: 300
+Sec-Ch-Ua: "Chromium";v="125", "Not.A/Brand";v="24"
+Accept: application/json, text/plain, */*
+Content-Type: application/json
+Sec-Ch-Ua-Mobile: ?0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlcnJvciI6ZmFsc2UsInVzZXJuYW1lIjoiMjQ1MzIxNzQ4MDI0Iiwic3ViIjo5NTQsInJvbGUiOiJTVFVERU5UIiwiY29sbGVnZUlkIjoyLCJjb2xsZWdlTmFtZSI6Ik5HSVQiLCJuYW1lIjoiRyBTUklOSVZBU0EgTkFHRU5EUkEgTUlUSFJBIiwiaWF0IjoxNzE4MzcxNzQ2LCJleHAiOjE3MTgzOTMzNDZ9.Hqj56TyRrpIpTZ-I9bFEGrZ3abOs7IOn18ndm-Ge7Dg
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.112 Safari/537.36
+Sec-Ch-Ua-Platform: "macOS"
+Origin: https://tesseractonline.com
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://tesseractonline.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=1, i
+Connection: keep-alive
+
+{"regulationId":5,"regulationCode":"NGIT-R-21","yearsemesterId":12,"yearsemesterCode":"VI","branchId":6,"branchCode":"NGIT-CSM","sectionId":40,"sectionName":"CSM-FS","subjectId":"77","subjectName":"Soft Skills & Interpersonal Skills","topicId":1959,"topicName":"Formal Presentations","quizId":406146}

@@ -1,36 +1,48 @@
-const axios = require("axios");
-const fs = require("fs");
+const fs = require("fs")
+const axios = require("axios")
 
-let questionRawRequest = fs.readFileSync("questionRequest.txt", "utf-8");
-let submitRawRequest = fs.readFileSync("submitRequest.txt", "utf-8");
-let questionIds = process.argv.slice(2).map((id) => parseInt(id));
+let submitQuestionsRequests = fs.readFileSync("submitQuestionsRequests.txt", "utf-8");
+let questionIds = []
 
-function parseRawRequest(rawRequest) {
-    const [requestLine, ...headerLines] = rawRequest.trim().split("\n");
-    const [method, url] = requestLine.split(" ").slice(0, 2);
+function parseRawRequests(rawRequests) {
+    const requests = rawRequests.trim().split("\n\n\n");
 
-    const headers = {};
-    let body = "";
+    function parseRawRequest(rawRequest) {
+        const [requestLine, ...headerLines] = rawRequest.trim().split("\n");
+        const [method, url] = requestLine.split(" ").slice(0, 2);
 
-    let parsingHeaders = true;
-    headerLines.forEach((line) => {
-        if (parsingHeaders) {
-            if (line.trim() === "") {
-                parsingHeaders = false;
+        const headers = {};
+        let body = "";
+
+        let parsingHeaders = true;
+        headerLines.forEach((line) => {
+            if (parsingHeaders) {
+                if (line.trim() === "") {
+                    parsingHeaders = false;
+                } else {
+                    const [key, ...values] = line.split(": ");
+                    headers[key] = values.join(": ");
+                }
             } else {
-                const [key, ...values] = line.split(": ");
-                headers[key] = values.join(": ");
+                body += line;
             }
-        } else {
-            body += line;
-        }
+        });
+
+        return { method, url, headers, body: JSON.parse(body.trim()) };
+    }
+
+    const parsedRequests = requests.map(parseRawRequest)
+    parsedRequests.forEach(r => {
+        if (r.body.questionId !== undefined)
+            questionIds.push(r.body.questionId)
     });
 
-    return { method, url, headers, body: JSON.parse(body.trim()) };
+    return parsedRequests
 }
 
-function sendRequest(rawRequest, answer, questionId) {
-    const { method, url, headers, body } = parseRawRequest(rawRequest);
+const requestsParsed = parseRawRequests(submitQuestionsRequests)
+function sendRequest(request, questionId, answer) {
+    const { method, url, headers, body } = request;
     body.userAnswer = answer;
     body.questionId = questionId;
 
@@ -42,9 +54,8 @@ function sendRequest(rawRequest, answer, questionId) {
     });
 }
 
-function sendSubmitRequest(rawRequest) {
-    const { method, url, headers, body } = parseRawRequest(rawRequest);
-
+function sendSubmitRequest(submitRequest) {
+    const { method, url, headers, body } = submitRequest;
     return axios({
         method,
         url: `https://${headers.Host}${url}`,
@@ -54,17 +65,16 @@ function sendSubmitRequest(rawRequest) {
 }
 
 (async () => {
+    console.log('Initializing bomber...');
+
     for (let i = 0; i < 5; i += 1) {
-        await sendRequest(questionRawRequest, "a", questionIds[i]).then(
-            (res) => {
-                console.log(res.data);
-            }
-        );
+        await sendRequest(requestsParsed[i], questionIds[i], "a").then();
     }
 
     const choices = ["a", "a", "a", "a", "a"];
+    let maxScore = Number.MIN_SAFE_INTEGER;
 
-    let score = await sendSubmitRequest(submitRawRequest).then(
+    let score = await sendSubmitRequest(requestsParsed[requestsParsed.length - 1]).then(
         (res) => res.data.payload.score
     );
 
@@ -78,18 +88,22 @@ function sendSubmitRequest(rawRequest) {
         let c = "a";
         for (let j = 0; j < 4; j += 1) {
             choices[i] = c;
-            await sendRequest(questionRawRequest, choices[i], questionIds[i]);
-            const newScore = await sendSubmitRequest(submitRawRequest).then(
+            await sendRequest(requestsParsed[i], questionIds[i], choices[i]);
+            const newScore = await sendSubmitRequest(requestsParsed[requestsParsed.length - 1]).then(
                 (res) => res.data.payload.score
             );
-            console.log(newScore);
+
+            maxScore = Math.max(maxScore, newScore);
+            process.stdout.clearLine();
+            process.stdout.cursorTo(0);
+            process.stdout.write(`Current Score: ${maxScore}`);
 
             if (newScore < score) {
                 choices[i] = initialChoice;
                 await sendRequest(
-                    questionRawRequest,
-                    choices[i],
-                    questionIds[i]
+                    requestsParsed[i],
+                    questionIds[i],
+                    choices[i]
                 );
                 break;
             }
@@ -103,5 +117,6 @@ function sendSubmitRequest(rawRequest) {
         }
     }
 
-    console.log(choices);
+    console.log('\nBombing complete!')
+    console.log(`Final answers: [${choices.join(', ')}]`);
 })();
